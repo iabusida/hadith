@@ -14,7 +14,6 @@
 		A67BBF7D182F428B00CFABC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A67BBF7B182F428B00CFABC0 /* InfoPlist.strings */; };
 		A67BBF7F182F428B00CFABC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A67BBF7E182F428B00CFABC0 /* main.m */; };
 		A67BBF83182F428B00CFABC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A67BBF82182F428B00CFABC0 /* AppDelegate.m */; };
-		A67BBF86182F428B00CFABC0 /* hadith.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A67BBF84182F428B00CFABC0 /* hadith.xcdatamodeld */; };
 		A67BBF88182F428B00CFABC0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A67BBF87182F428B00CFABC0 /* Images.xcassets */; };
 		A67BBF8F182F428B00CFABC0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BBF8E182F428B00CFABC0 /* XCTest.framework */; };
 		A67BBF90182F428B00CFABC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BBF70182F428A00CFABC0 /* Foundation.framework */; };
@@ -22,7 +21,35 @@
 		A67BBF92182F428B00CFABC0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BBF76182F428B00CFABC0 /* CoreData.framework */; };
 		A67BBF9A182F428B00CFABC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A67BBF98182F428B00CFABC0 /* InfoPlist.strings */; };
 		A67BBF9C182F428B00CFABC0 /* hadithTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A67BBF9B182F428B00CFABC0 /* hadithTests.m */; };
+		A67BBFA6182F42D700CFABC0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BBFA5182F42D700CFABC0 /* libsqlite3.dylib */; };
+		A69A85F51839B5F20034C8A9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69A85F31839B5F20034C8A9 /* DetailViewController.m */; };
+		A69A85F61839B5F20034C8A9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69A85F41839B5F20034C8A9 /* DetailViewController.xib */; };
+		A69A85FA1839C7220034C8A9 /* HadithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69A85F81839C7220034C8A9 /* HadithViewController.m */; };
+		A69A85FB1839C7220034C8A9 /* HadithViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69A85F91839C7220034C8A9 /* HadithViewController.xib */; };
+		A6CDD3E0182FDA810080D48A /* BasicData.db in Resources */ = {isa = PBXBuildFile; fileRef = A67BBFA8182F474A00CFABC0 /* BasicData.db */; };
+		A6CDD3E1182FDA830080D48A /* hadith.db in Resources */ = {isa = PBXBuildFile; fileRef = A67BBFA7182F441700CFABC0 /* hadith.db */; };
+		A6CDD3E5182FE8490080D48A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3E4182FE8490080D48A /* Book.m */; };
+		A6CDD3E8182FE8E60080D48A /* HadithContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3E7182FE8E50080D48A /* HadithContext.m */; };
+		A6CDD3EB182FF4090080D48A /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3EA182FF4090080D48A /* Chapter.m */; };
+		A6CDD3EE182FF7030080D48A /* HadithSource.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3ED182FF7030080D48A /* HadithSource.m */; };
+		A6CDD3F1182FF7CE0080D48A /* HadithNarration.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3F0182FF7CE0080D48A /* HadithNarration.m */; };
+		A6CDD3F5183030F20080D48A /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3F3183030F20080D48A /* HomeViewController.m */; };
+		A6CDD3F6183030F20080D48A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CDD3F4183030F20080D48A /* HomeViewController.xib */; };
+		A6CDD3FB183034DC0080D48A /* SourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3FA183034DC0080D48A /* SourceCell.m */; };
+		A6CDD3FD183034EE0080D48A /* SourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6CDD3FC183034EE0080D48A /* SourceCell.xib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		A63E7D0E182FD9EB00C51AD3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodeld;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# momc\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		A67BBF93182F428B00CFABC0 /* PBXContainerItemProxy */ = {
@@ -46,13 +73,37 @@
 		A67BBF80182F428B00CFABC0 /* hadith-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "hadith-Prefix.pch"; sourceTree = "<group>"; };
 		A67BBF81182F428B00CFABC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A67BBF82182F428B00CFABC0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A67BBF85182F428B00CFABC0 /* hadith.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = hadith.xcdatamodel; sourceTree = "<group>"; };
 		A67BBF87182F428B00CFABC0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A67BBF8D182F428B00CFABC0 /* hadithTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hadithTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A67BBF8E182F428B00CFABC0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		A67BBF97182F428B00CFABC0 /* hadithTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "hadithTests-Info.plist"; sourceTree = "<group>"; };
 		A67BBF99182F428B00CFABC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A67BBF9B182F428B00CFABC0 /* hadithTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hadithTests.m; sourceTree = "<group>"; };
+		A67BBFA5182F42D700CFABC0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A67BBFA7182F441700CFABC0 /* hadith.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hadith.db; sourceTree = "<group>"; };
+		A67BBFA8182F474A00CFABC0 /* BasicData.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicData.db; sourceTree = "<group>"; };
+		A69A85F21839B5F20034C8A9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A69A85F31839B5F20034C8A9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A69A85F41839B5F20034C8A9 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		A69A85F71839C7220034C8A9 /* HadithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithViewController.h; sourceTree = "<group>"; };
+		A69A85F81839C7220034C8A9 /* HadithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HadithViewController.m; sourceTree = "<group>"; };
+		A69A85F91839C7220034C8A9 /* HadithViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HadithViewController.xib; sourceTree = "<group>"; };
+		A6CDD3E3182FE8490080D48A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		A6CDD3E4182FE8490080D48A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
+		A6CDD3E6182FE8E50080D48A /* HadithContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithContext.h; sourceTree = "<group>"; };
+		A6CDD3E7182FE8E50080D48A /* HadithContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HadithContext.m; sourceTree = "<group>"; };
+		A6CDD3E9182FF4090080D48A /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
+		A6CDD3EA182FF4090080D48A /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
+		A6CDD3EC182FF7030080D48A /* HadithSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithSource.h; sourceTree = "<group>"; };
+		A6CDD3ED182FF7030080D48A /* HadithSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HadithSource.m; sourceTree = "<group>"; };
+		A6CDD3EF182FF7CE0080D48A /* HadithNarration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithNarration.h; sourceTree = "<group>"; };
+		A6CDD3F0182FF7CE0080D48A /* HadithNarration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HadithNarration.m; sourceTree = "<group>"; };
+		A6CDD3F2183030F20080D48A /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = hadith/HomeViewController.h; sourceTree = "<group>"; };
+		A6CDD3F3183030F20080D48A /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = hadith/HomeViewController.m; sourceTree = "<group>"; };
+		A6CDD3F4183030F20080D48A /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HomeViewController.xib; path = hadith/HomeViewController.xib; sourceTree = "<group>"; };
+		A6CDD3F9183034DC0080D48A /* SourceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SourceCell.h; sourceTree = "<group>"; };
+		A6CDD3FA183034DC0080D48A /* SourceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SourceCell.m; sourceTree = "<group>"; };
+		A6CDD3FC183034EE0080D48A /* SourceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SourceCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A67BBFA6182F42D700CFABC0 /* libsqlite3.dylib in Frameworks */,
 				A67BBF73182F428B00CFABC0 /* CoreGraphics.framework in Frameworks */,
 				A67BBF77182F428B00CFABC0 /* CoreData.framework in Frameworks */,
 				A67BBF75182F428B00CFABC0 /* UIKit.framework in Frameworks */,
@@ -84,6 +136,13 @@
 		A67BBF64182F428A00CFABC0 = {
 			isa = PBXGroup;
 			children = (
+				A6CDD3E6182FE8E50080D48A /* HadithContext.h */,
+				A6CDD3E7182FE8E50080D48A /* HadithContext.m */,
+				A6CDD3E2182FE8290080D48A /* Model */,
+				A67BBFA8182F474A00CFABC0 /* BasicData.db */,
+				A67BBFA7182F441700CFABC0 /* hadith.db */,
+				A6CDD3F8183034B80080D48A /* TableCells */,
+				A6CDD3F7183034A00080D48A /* ViewControllers */,
 				A67BBF78182F428B00CFABC0 /* hadith */,
 				A67BBF95182F428B00CFABC0 /* hadithTests */,
 				A67BBF6F182F428A00CFABC0 /* Frameworks */,
@@ -103,6 +162,7 @@
 		A67BBF6F182F428A00CFABC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A67BBFA5182F42D700CFABC0 /* libsqlite3.dylib */,
 				A67BBF70182F428A00CFABC0 /* Foundation.framework */,
 				A67BBF72182F428B00CFABC0 /* CoreGraphics.framework */,
 				A67BBF74182F428B00CFABC0 /* UIKit.framework */,
@@ -118,7 +178,6 @@
 				A67BBF81182F428B00CFABC0 /* AppDelegate.h */,
 				A67BBF82182F428B00CFABC0 /* AppDelegate.m */,
 				A67BBF87182F428B00CFABC0 /* Images.xcassets */,
-				A67BBF84182F428B00CFABC0 /* hadith.xcdatamodeld */,
 				A67BBF79182F428B00CFABC0 /* Supporting Files */,
 			);
 			path = hadith;
@@ -153,6 +212,47 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A6CDD3E2182FE8290080D48A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A6CDD3E3182FE8490080D48A /* Book.h */,
+				A6CDD3E4182FE8490080D48A /* Book.m */,
+				A6CDD3E9182FF4090080D48A /* Chapter.h */,
+				A6CDD3EA182FF4090080D48A /* Chapter.m */,
+				A6CDD3EC182FF7030080D48A /* HadithSource.h */,
+				A6CDD3ED182FF7030080D48A /* HadithSource.m */,
+				A6CDD3EF182FF7CE0080D48A /* HadithNarration.h */,
+				A6CDD3F0182FF7CE0080D48A /* HadithNarration.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A6CDD3F7183034A00080D48A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A6CDD3F2183030F20080D48A /* HomeViewController.h */,
+				A6CDD3F3183030F20080D48A /* HomeViewController.m */,
+				A6CDD3F4183030F20080D48A /* HomeViewController.xib */,
+				A69A85F21839B5F20034C8A9 /* DetailViewController.h */,
+				A69A85F31839B5F20034C8A9 /* DetailViewController.m */,
+				A69A85F41839B5F20034C8A9 /* DetailViewController.xib */,
+				A69A85F71839C7220034C8A9 /* HadithViewController.h */,
+				A69A85F81839C7220034C8A9 /* HadithViewController.m */,
+				A69A85F91839C7220034C8A9 /* HadithViewController.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A6CDD3F8183034B80080D48A /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				A6CDD3F9183034DC0080D48A /* SourceCell.h */,
+				A6CDD3FA183034DC0080D48A /* SourceCell.m */,
+				A6CDD3FC183034EE0080D48A /* SourceCell.xib */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -165,6 +265,7 @@
 				A67BBF6B182F428A00CFABC0 /* Resources */,
 			);
 			buildRules = (
+				A63E7D0E182FD9EB00C51AD3 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -228,8 +329,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6CDD3FD183034EE0080D48A /* SourceCell.xib in Resources */,
 				A67BBF7D182F428B00CFABC0 /* InfoPlist.strings in Resources */,
+				A69A85FB1839C7220034C8A9 /* HadithViewController.xib in Resources */,
+				A6CDD3F6183030F20080D48A /* HomeViewController.xib in Resources */,
+				A69A85F61839B5F20034C8A9 /* DetailViewController.xib in Resources */,
 				A67BBF88182F428B00CFABC0 /* Images.xcassets in Resources */,
+				A6CDD3E1182FDA830080D48A /* hadith.db in Resources */,
+				A6CDD3E0182FDA810080D48A /* BasicData.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +355,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A67BBF86182F428B00CFABC0 /* hadith.xcdatamodeld in Sources */,
+				A6CDD3EE182FF7030080D48A /* HadithSource.m in Sources */,
+				A6CDD3F5183030F20080D48A /* HomeViewController.m in Sources */,
 				A67BBF83182F428B00CFABC0 /* AppDelegate.m in Sources */,
+				A69A85FA1839C7220034C8A9 /* HadithViewController.m in Sources */,
+				A6CDD3E8182FE8E60080D48A /* HadithContext.m in Sources */,
+				A6CDD3E5182FE8490080D48A /* Book.m in Sources */,
+				A69A85F51839B5F20034C8A9 /* DetailViewController.m in Sources */,
+				A6CDD3F1182FF7CE0080D48A /* HadithNarration.m in Sources */,
+				A6CDD3EB182FF4090080D48A /* Chapter.m in Sources */,
 				A67BBF7F182F428B00CFABC0 /* main.m in Sources */,
+				A6CDD3FB183034DC0080D48A /* SourceCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +484,7 @@
 		A67BBFA0182F428B00CFABC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -382,6 +498,7 @@
 		A67BBFA1182F428B00CFABC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -453,6 +570,7 @@
 				A67BBFA1182F428B00CFABC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A67BBFA2182F428B00CFABC0 /* Build configuration list for PBXNativeTarget "hadithTests" */ = {
 			isa = XCConfigurationList;
@@ -461,21 +579,9 @@
 				A67BBFA4182F428B00CFABC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A67BBF84182F428B00CFABC0 /* hadith.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A67BBF85182F428B00CFABC0 /* hadith.xcdatamodel */,
-			);
-			currentVersion = A67BBF85182F428B00CFABC0 /* hadith.xcdatamodel */;
-			path = hadith.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A67BBF65182F428A00CFABC0 /* Project object */;
 }
