@@ -74,9 +74,15 @@
             while(sqlite3_step(selectStatement) == SQLITE_ROW) {
                 HadithNarration *narration = [[HadithNarration alloc]init];
                 narration.NarrationId = [[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 0)]integerValue];
-                narration.EnglishNarrator = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 1)];
-                narration.EnglishDetails = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 2)];
-                narration.ArabicDetails = [NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 3)];
+                
+                char *englishNarrator = (char *)sqlite3_column_text(selectStatement, 1);
+                
+              if(englishNarrator != nil)
+                {
+                    narration.EnglishNarrator = [NSString stringWithUTF8String:englishNarrator];
+                }
+                narration.EnglishDetails = [NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 2)]];
+                narration.ArabicDetails = [NSString stringWithFormat:@"%@",[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 3)]];
                 narration.Number = [[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 4)] integerValue];
                 narration.ChapterId = [[NSString stringWithUTF8String:(char *)sqlite3_column_text(selectStatement, 5)] intValue];
                 [sqliteData addObject:narration];

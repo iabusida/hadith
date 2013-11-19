@@ -8,7 +8,6 @@
 
 #import "HomeViewController.h"
 #import "DetailViewController.h"
-#import "HadithViewController.h"
 @interface HomeViewController ()
 
 @end

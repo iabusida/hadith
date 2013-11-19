@@ -24,9 +24,6 @@
 		A67BBFA6182F42D700CFABC0 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A67BBFA5182F42D700CFABC0 /* libsqlite3.dylib */; };
 		A69A85F51839B5F20034C8A9 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69A85F31839B5F20034C8A9 /* DetailViewController.m */; };
 		A69A85F61839B5F20034C8A9 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69A85F41839B5F20034C8A9 /* DetailViewController.xib */; };
-		A69A85FA1839C7220034C8A9 /* HadithViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A69A85F81839C7220034C8A9 /* HadithViewController.m */; };
-		A69A85FB1839C7220034C8A9 /* HadithViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A69A85F91839C7220034C8A9 /* HadithViewController.xib */; };
-		A6CDD3E0182FDA810080D48A /* BasicData.db in Resources */ = {isa = PBXBuildFile; fileRef = A67BBFA8182F474A00CFABC0 /* BasicData.db */; };
 		A6CDD3E1182FDA830080D48A /* hadith.db in Resources */ = {isa = PBXBuildFile; fileRef = A67BBFA7182F441700CFABC0 /* hadith.db */; };
 		A6CDD3E5182FE8490080D48A /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3E4182FE8490080D48A /* Book.m */; };
 		A6CDD3E8182FE8E60080D48A /* HadithContext.m in Sources */ = {isa = PBXBuildFile; fileRef = A6CDD3E7182FE8E50080D48A /* HadithContext.m */; };
@@ -81,13 +78,9 @@
 		A67BBF9B182F428B00CFABC0 /* hadithTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = hadithTests.m; sourceTree = "<group>"; };
 		A67BBFA5182F42D700CFABC0 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A67BBFA7182F441700CFABC0 /* hadith.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = hadith.db; sourceTree = "<group>"; };
-		A67BBFA8182F474A00CFABC0 /* BasicData.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = BasicData.db; sourceTree = "<group>"; };
 		A69A85F21839B5F20034C8A9 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		A69A85F31839B5F20034C8A9 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		A69A85F41839B5F20034C8A9 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
-		A69A85F71839C7220034C8A9 /* HadithViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithViewController.h; sourceTree = "<group>"; };
-		A69A85F81839C7220034C8A9 /* HadithViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HadithViewController.m; sourceTree = "<group>"; };
-		A69A85F91839C7220034C8A9 /* HadithViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HadithViewController.xib; sourceTree = "<group>"; };
 		A6CDD3E3182FE8490080D48A /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		A6CDD3E4182FE8490080D48A /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		A6CDD3E6182FE8E50080D48A /* HadithContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HadithContext.h; sourceTree = "<group>"; };
@@ -139,7 +132,6 @@
 				A6CDD3E6182FE8E50080D48A /* HadithContext.h */,
 				A6CDD3E7182FE8E50080D48A /* HadithContext.m */,
 				A6CDD3E2182FE8290080D48A /* Model */,
-				A67BBFA8182F474A00CFABC0 /* BasicData.db */,
 				A67BBFA7182F441700CFABC0 /* hadith.db */,
 				A6CDD3F8183034B80080D48A /* TableCells */,
 				A6CDD3F7183034A00080D48A /* ViewControllers */,
@@ -236,9 +228,6 @@
 				A69A85F21839B5F20034C8A9 /* DetailViewController.h */,
 				A69A85F31839B5F20034C8A9 /* DetailViewController.m */,
 				A69A85F41839B5F20034C8A9 /* DetailViewController.xib */,
-				A69A85F71839C7220034C8A9 /* HadithViewController.h */,
-				A69A85F81839C7220034C8A9 /* HadithViewController.m */,
-				A69A85F91839C7220034C8A9 /* HadithViewController.xib */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -331,12 +320,10 @@
 			files = (
 				A6CDD3FD183034EE0080D48A /* SourceCell.xib in Resources */,
 				A67BBF7D182F428B00CFABC0 /* InfoPlist.strings in Resources */,
-				A69A85FB1839C7220034C8A9 /* HadithViewController.xib in Resources */,
 				A6CDD3F6183030F20080D48A /* HomeViewController.xib in Resources */,
 				A69A85F61839B5F20034C8A9 /* DetailViewController.xib in Resources */,
 				A67BBF88182F428B00CFABC0 /* Images.xcassets in Resources */,
 				A6CDD3E1182FDA830080D48A /* hadith.db in Resources */,
-				A6CDD3E0182FDA810080D48A /* BasicData.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,7 +345,6 @@
 				A6CDD3EE182FF7030080D48A /* HadithSource.m in Sources */,
 				A6CDD3F5183030F20080D48A /* HomeViewController.m in Sources */,
 				A67BBF83182F428B00CFABC0 /* AppDelegate.m in Sources */,
-				A69A85FA1839C7220034C8A9 /* HadithViewController.m in Sources */,
 				A6CDD3E8182FE8E60080D48A /* HadithContext.m in Sources */,
 				A6CDD3E5182FE8490080D48A /* Book.m in Sources */,
 				A69A85F51839B5F20034C8A9 /* DetailViewController.m in Sources */,

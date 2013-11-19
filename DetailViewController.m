@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "HadithNarration.h"
 #import "HadithContext.h"
+#import "Chapter.h"
 @interface DetailViewController ()
 
 @end
@@ -31,7 +32,15 @@
     if (self) {
         self.bookId = bookId;
         self.sourceId = sourceId;
-
+        chapterIds = [[NSMutableArray alloc] init];
+        hadithContext = [[HadithContext alloc] init];
+        EnglishText.showsVerticalScrollIndicator = YES;
+        NSMutableArray *chapters = [hadithContext GetChapters:[NSString stringWithFormat:@"select * from chapters where book_bookid = %d", bookId]];
+        
+        for(Chapter *chapter in chapters)
+        {
+            [chapterIds addObject:[NSString stringWithFormat:@"%d", chapter.ChapterId]];
+        }
         NSLog(@"Text: %@", lblTitle.text);
         // Custom initialization
     }
@@ -42,12 +51,24 @@
 {
     [super viewDidLoad];
     hadithContext = [[HadithContext alloc] init];
+    NSString *mergeIdString = [chapterIds componentsJoinedByString:@","];
+    
+    narrations = [hadithContext GetNarrations:[NSString stringWithFormat:@"select * from Narrations where Chapter_ChapterId in (%@)", mergeIdString]];
+    if([narrations count] > 0)
+    {
+        narrationIndex = 0;
+        lblTitle.text = [NSString stringWithFormat:@"%d out of %d narrations", narrationIndex + 1, [narrations count]];
+        HadithNarration *narration = [narrations objectAtIndex:narrationIndex];
+       [EnglishText setText:narration.EnglishDetails];
+    }
 
-    NSMutableArray *narrations = [hadithContext GetNarrations:@"select * from Narrations where Chapter_ChapterId in (1,2,3,4,5)"];
-    HadithNarration *narration = [narrations objectAtIndex:0];
-    NSLog(@"Narrator %@", narration.EnglishNarrator);
-    lblTitle.text =narration.EnglishDetails;
-  //  Title.text =
+}
+-(IBAction)Next:(id)sender{
+    narrationIndex += 1;
+    lblTitle.text = [NSString stringWithFormat:@"%d out of %d narrations", narrationIndex + 1, [narrations count]];
+    HadithNarration *narration = [narrations objectAtIndex:narrationIndex];
+    [EnglishText setText:narration.EnglishDetails];
+    
 }
 
 - (void)didReceiveMemoryWarning

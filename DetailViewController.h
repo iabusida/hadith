@@ -12,6 +12,11 @@
 {
     HadithContext *hadithContext;
     IBOutlet UILabel *lblTitle;
+    int narrationIndex;
+    IBOutlet UITextView *EnglishText;
+    NSMutableArray *chapterIds;
+    IBOutlet UIButton *NextButton;
+    NSMutableArray *narrations;
 }
 
 - (id)initWithHadithBook:(int)sourceId :(int)bookId;
